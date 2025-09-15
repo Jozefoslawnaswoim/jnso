@@ -136,7 +136,7 @@ function Hero() {
 
 function QuickStats() {
   const staty = [
-    { icon: Users, label: "Liczba mieszkańców", value: "~?", note: "Szacunek — do potwierdzenia na podstawie danych GUS / ewidencji ludności." },
+    { icon: Users, label: "Liczba mieszkańców", value: "~16-17 tys.", note: "Szacunek — do potwierdzenia na podstawie danych GUS / ewidencji ludności." },
     { icon: Building2, label: "Skala zabudowy", value: "wysoka", note: "Wydawane liczne pozwolenia na budowę w ostatnich latach (dane lokalne)." },
     { icon: AlertTriangle, label: "Infrastruktura publiczna", value: "niewystarczająca", note: "Boiska, parki, miejsca rekreacji: zapotrzebowanie > podaż." },
     { icon: ChartBar, label: "Udział w podatkach", value: "znaczący", note: "Mieszkańcy oczekują proporcjonalnych inwestycji lokalnych." },
