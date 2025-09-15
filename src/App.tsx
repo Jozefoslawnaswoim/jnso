@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { CheckCircle, Mail, MapPin, ThumbsUp, Users, FileText, Landmark, ChartBar, AlertTriangle, Send, Download, Settings, ChevronRight, HeartHandshake, Megaphone, Shield, Building2 } from "lucide-react";
+import { CheckCircle, Mail, MapPin, ThumbsUp, Users, FileText, Landmark,  BarChart3 as ChartBar, AlertTriangle, Send, Download, Settings, ChevronRight, HeartHandshake, Megaphone, Shield, Building2 } from "lucide-react";
 
 /**
  * JozefoslawNaSwoim.org — Jednoplikowa aplikacja React
