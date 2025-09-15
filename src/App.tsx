@@ -171,35 +171,6 @@ function Roadmap() {
   );
 }
 
-function MapSection(){
-  return (
-    <section className="py-16">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="rounded-3xl border bg-white shadow-sm overflow-hidden">
-          <div className="p-5 flex items-center gap-2 border-b">
-            <div className="text-xl">📍</div>
-            <div className="font-semibold">Mapa zgłaszanych problemów i pomysłów</div>
-          </div>
-          <div className="grid md:grid-cols-2">
-            <div className="p-5 text-sm text-slate-700">
-              <p>Oznacz na mapie miejsca wymagające uwagi: brak chodnika, niebezpieczne przejście, potrzeba parku lub placu zabaw. Podziel się lokalnymi obserwacjami.</p>
-              <ul className="mt-3 list-disc pl-5 space-y-1">
-                <li>Transport i bezpieczeństwo</li>
-                <li>Zieleń i rekreacja</li>
-                <li>Edukacja i opieka</li>
-              </ul>
-              <p className="mt-3 text-xs text-slate-500">W wersji produkcyjnej możesz podpiąć narzędzie typu uMap / Maptionnaire lub własny geoformularz.</p>
-            </div>
-            <div className="min-h-[300px]">
-              <iframe title="Mapa Józefosław" className="w-full h-full" src="https://www.openstreetmap.org/export/embed.html?bbox=20.98%2C52.08%2C21.07%2C52.13&layer=mapnik&marker=52.105%2C21.02"></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function HowToHelp(){
   const items = [
     {title:"Dołącz do zespołu wolontariuszy", text:"Potrzebni są specjaliści od prawa, finansów, urbanistyki, komunikacji i IT."},
