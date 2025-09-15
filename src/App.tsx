@@ -76,9 +76,16 @@ function Hero() {
         </div>
         <div>
           <div className="relative rounded-3xl shadow-lg ring-1 ring-slate-200 overflow-hidden">
-            <img alt="Józefosław" src="https://staticmap.openstreetmap.de/staticmap.php?center=52.105,21.02&zoom=13&size=800x500&markers=52.105,21.02,red-pushpin" className="w-full h-auto" loading="lazy"/>
+            <div className="relative w-full" style={{ paddingTop: "62.5%" }}>
+              <iframe
+                title="Mapa Józefosław"
+                className="absolute inset-0 w-full h-full"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=20.98%2C52.08%2C21.07%2C52.13&layer=mapnik&marker=52.105%2C21.02"
+                loading="lazy"
+              />
+            </div>
           </div>
-          <p className="mt-2 text-xs text-slate-500">Mapa poglądowa okolic Józefosławia (OpenStreetMap).</p>
+          <p className="mt-2 text-xs text-slate-500">Mapa poglądowa okolic Józefosławia (OpenStreetMap – osadzona jako iframe, bez limitów obrazków).</p>
         </div>
       </div>
     </section>
