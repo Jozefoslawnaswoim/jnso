@@ -120,7 +120,12 @@ function Hero() {
         </motion.div>
         <motion.div initial={{opacity:0, y:10}} whileInView={{opacity:1, y:0}} transition={{duration:0.6, delay:0.1}} viewport={{once:true}}>
           <div className="relative rounded-3xl shadow-lg ring-1 ring-slate-200 overflow-hidden">
-            <img alt="Józefosław" src="https://maps.locationiq.com/v3/staticmap?key=pk.eyJ1IjoibWFwcy1kZW1vIiwiYSI6ImNqZ2VtMTh0eTAwM3Eyd3FsbTRja3VjOGIifQ&center=52.105,21.02&zoom=13&size=800x500&format=png&markers=icon:large-red-cutout|52.105,21.02" className="w-full h-auto"/>
+            <img
+			        alt="Józefosław"
+			        src="https://staticmap.openstreetmap.de/staticmap.php?center=52.105,21.02&zoom=13&size=800x500&markers=52.105,21.02,red-pushpin"
+			        className="w-full h-auto"
+			        loading="lazy"
+			      />
           </div>
           <p className="mt-2 text-xs text-slate-500">Mapa poglądowa okolic Józefosławia. Dokładne położenie i dane demograficzne: do potwierdzenia.</p>
         </motion.div>
@@ -395,11 +400,11 @@ function Survey() {
             </button>
             {status==="ok" && <span className="text-emerald-700 text-sm">Dziękujemy! Twoja odpowiedź została zapisana.</span>}
             {status==="error" && <span className="text-red-600 text-sm">Ups, nie udało się wysłać. Spróbuj ponownie lub skontaktuj się z nami.</span>}
-            {!ENDPOINT_FORMULARZA && (
-              <button type="button" onClick={handleDownload} className="ml-auto inline-flex items-center gap-2 rounded-2xl border px-4 py-2 text-sm hover:bg-slate-50">
-                <Download className="h-4 w-4"/> Eksportuj lokalne odpowiedzi (CSV)
-              </button>
-            )}
+//            {!ENDPOINT_FORMULARZA && (
+//             <button type="button" onClick={handleDownload} className="ml-auto inline-flex items-center gap-2 rounded-2xl border px-4 py-2 text-sm hover:bg-slate-50">
+//                <Download className="h-4 w-4"/> Eksportuj lokalne odpowiedzi (CSV)
+//              </button>
+//            )}
           </div>
         </form>
       </div>
@@ -530,7 +535,7 @@ function Contact(){
               <p className="mt-2 text-sm text-slate-700">Masz pytanie, chcesz dołączyć? Napisz do nas.</p>
               <div className="mt-3">
                 <a className="inline-flex items-center gap-2 rounded-2xl bg-emerald-600 text-white px-5 py-3 font-semibold shadow-sm hover:bg-emerald-700" href="mailto:kontakt@jozefoslawnaswoim.org">
-                  <Mail className="h-5 w-5"/> kontakt@jozefoslawnaswoim.org
+                  <Mail className="h-5 w-5"/> jozefoslawnaswoim@outlook.com
                 </a>
               </div>
               <p className="mt-3 text-xs text-slate-500">Jeśli nie masz jeszcze skrzynki pod tą domeną, podmień adres w kodzie.</p>
