@@ -6,7 +6,9 @@ import React from "react";
 // - wszystko w jednym pliku, eksport domyślny komponentu React
 
 const NAZWA = "Józefosław Na Swoim";
-const FB_URL = "https://www.facebook.com/JozefoslawNaSwoim"; // ← podmień, jeśli inny
+const FB_URL = "https://www.facebook.com/JozefoslawNaSwoim";
+const LOGO_URL = "/jnso.png"; // wrzuć plik do folderu public/ o nazwie jnso.png
+ // ← podmień, jeśli inny
 
 export default function App() {
   return (
@@ -30,7 +32,7 @@ function Header() {
     <header className="sticky top-0 z-40 backdrop-blur bg-white/70 border-b border-slate-200">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-emerald-100">🏛️</span>
+          <img src={LOGO_URL} alt={NAZWA} className="h-9 w-9 rounded-2xl ring-1 ring-emerald-200 bg-white object-cover" />
           <div className="leading-tight">
             <div className="font-bold text-slate-900">{NAZWA}</div>
             <div className="text-xs text-slate-500">Oddolna inicjatywa mieszkańców</div>
