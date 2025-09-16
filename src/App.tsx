@@ -114,14 +114,6 @@ function Hero() {
           <p className="mt-2 text-xs text-slate-500">
             Mapa poglądowa proponowanych granic Józefosławia. Tło © OpenStreetMap (ODbL).
           </p>
-          <a
-            href="/mapa-jozefoslaw.png"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-1 text-xs text-emerald-700 hover:underline"
-          >
-            Otwórz w nowej karcie
-          </a>
         </div>
       </div>
 
@@ -132,7 +124,7 @@ function Hero() {
           role="dialog" aria-modal="true"
         >
           <img
-            src="/mapa-jozefoslaw-final.png"
+            src="/mapa-jozefoslaw.png"
             alt="Powiększona mapa granic Józefosławia"
             className="max-w-[min(90vw,1600px)] max-h-[90vh] object-contain rounded-xl shadow-2xl ring-1 ring-white/20"
           />
