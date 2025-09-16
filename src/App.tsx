@@ -1,4 +1,6 @@
 import React from "react";
+import { Users, Building2, AlertTriangle, BarChart3 as ChartBar } from "lucide-react";
+import { motion } from "framer-motion";
 
 // Minimalna, samowystarczalna wersja strony do podglądu (bez zewnętrznych bibliotek)
 // - brak TypeScriptowych adnotacji
