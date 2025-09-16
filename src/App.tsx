@@ -115,7 +115,7 @@ function Hero() {
             Mapa poglądowa proponowanych granic Józefosławia. Tło © OpenStreetMap (ODbL).
           </p>
           <a
-            href="/mapa-jozefoslaw-final.png"
+            href="/mapa-jozefoslaw.png"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-1 text-xs text-emerald-700 hover:underline"
