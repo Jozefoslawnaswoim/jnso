@@ -94,6 +94,34 @@ function Hero() {
   );
 }
 
+function QuickStats() {
+  const staty = [
+    { icon: Users, label: "Liczba mieszkańców", value: "~?", note: "Szacunek — do potwierdzenia na podstawie danych GUS / ewidencji ludności." },
+    { icon: Building2, label: "Skala zabudowy", value: "wysoka", note: "Wydawane liczne pozwolenia na budowę w ostatnich latach (dane lokalne)." },
+    { icon: AlertTriangle, label: "Infrastruktura publiczna", value: "niewystarczająca", note: "Boiska, parki, miejsca rekreacji: zapotrzebowanie > podaż." },
+    { icon: ChartBar, label: "Udział w podatkach", value: "znaczący", note: "Mieszkańcy oczekują proporcjonalnych inwestycji lokalnych." },
+  ];
+  return (
+    <section className="py-10" aria-labelledby="staty">
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 id="staty" className="sr-only">Szybkie fakty</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {staty.map((s, i) => (
+            <motion.div key={i} initial={{opacity:0, y:8}} whileInView={{opacity:1, y:0}} viewport={{once:true}} transition={{duration:0.4, delay:i*0.05}} className="rounded-3xl border bg-white p-5 shadow-sm">
+              <div className="flex items-center gap-3">
+                <s.icon className="h-5 w-5 text-emerald-700"/>
+                <div className="text-sm text-slate-500">{s.label}</div>
+              </div>
+              <div className="mt-2 text-2xl font-extrabold">{s.value}</div>
+              <div className="mt-1 text-xs text-slate-500">{s.note}</div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function WhyNow() {
   const items = [
     {
