@@ -16,6 +16,7 @@ export default function App() {
       <Header />
       <main>
         <Hero />
+        <QuickStats />       
         <WhyNow />
         <Roadmap /><HowToHelp />
         <FAQ />
