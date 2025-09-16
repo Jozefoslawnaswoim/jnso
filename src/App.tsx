@@ -99,7 +99,7 @@ function Hero() {
             aria-label="Powiększ mapę"
           >
             <img
-              src="/mapa-jozefoslaw-final.png"
+              src="/mapa-jozefoslaw.png"
               alt="Proponowane granice gminy Józefosławia na tle OpenStreetMap"
               className="w-full h-auto transition-transform duration-300 group-hover:scale-[1.02]"
               loading="lazy"
