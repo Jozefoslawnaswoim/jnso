@@ -85,7 +85,7 @@ function Hero() {
         <div>
           <div className="relative rounded-3xl shadow-lg ring-1 ring-slate-200 overflow-hidden">
             <img
-              src="/mapa-jozefoslaw-final.png"
+              src="/mapa-jozefoslaw.png"
               alt="Proponowane granice gminy Józefosław na tle OpenStreetMap"
               className="w-full h-auto"
               loading="lazy"
