@@ -90,7 +90,7 @@ function Hero() {
               />
             </div>
           </div>
-          <p className="mt-2 text-xs text-slate-500">Mapa poglądowa okolic Józefosławia (OpenStreetMap – osadzona jako iframe, bez limitów obrazków).</p>
+          <p className="mt-2 text-xs text-slate-500">Mapa poglądowa okolic Józefosławia (źródło: OpenStreetMap).</p>
         </div>
       </div>
     </section>
