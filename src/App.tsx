@@ -57,6 +57,16 @@ function Header() {
 }
 
 function Hero() {
+  const [open, setOpen] = React.useState(false);
+
+  // Zamykaj lightbox klawiszem ESC
+  React.useEffect(() => {
+    if (!open) return;
+    const onKey = (e) => e.key === "Escape" && setOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,rgba(16,185,129,0.15),transparent_40%),radial-gradient(ellipse_at_bottom_left,rgba(59,130,246,0.15),transparent_40%)]"/>
@@ -83,21 +93,57 @@ function Hero() {
         </div>
 
         <div>
-          <div className="relative rounded-3xl shadow-lg ring-1 ring-slate-200 overflow-hidden">
+          <button
+            onClick={() => setOpen(true)}
+            className="w-full text-left relative rounded-3xl shadow-lg ring-1 ring-slate-200 overflow-hidden group"
+            aria-label="Powiększ mapę"
+          >
             <img
-              src="/mapa-jozefoslaw.png"
-              alt="Proponowane granice gminy Józefosław na tle OpenStreetMap"
-              className="w-full h-auto"
+              src="/mapa-jozefoslaw-final.png"
+              alt="Proponowane granice gminy Józefosławia na tle OpenStreetMap"
+              className="w-full h-auto transition-transform duration-300 group-hover:scale-[1.02]"
               loading="lazy"
               decoding="async"
               sizes="(min-width: 1024px) 600px, 100vw"
             />
-          </div>
+            <span className="absolute bottom-2 right-2 rounded-full bg-white/90 px-3 py-1 text-xs text-slate-700 shadow">
+              Kliknij, aby powiększyć
+            </span>
+          </button>
+
           <p className="mt-2 text-xs text-slate-500">
             Mapa poglądowa proponowanych granic Józefosławia. Tło © OpenStreetMap (ODbL).
           </p>
+          <a
+            href="/mapa-jozefoslaw-final.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-1 text-xs text-emerald-700 hover:underline"
+          >
+            Otwórz w nowej karcie
+          </a>
         </div>
       </div>
+
+      {open && (
+        <div
+          onClick={(e) => { if (e.target === e.currentTarget) setOpen(false); }}
+          className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm p-4 md:p-8 flex items-center justify-center"
+          role="dialog" aria-modal="true"
+        >
+          <img
+            src="/mapa-jozefoslaw-final.png"
+            alt="Powiększona mapa granic Józefosławia"
+            className="max-w-[min(90vw,1600px)] max-h-[90vh] object-contain rounded-xl shadow-2xl ring-1 ring-white/20"
+          />
+          <button
+            onClick={() => setOpen(false)}
+            className="absolute top-4 right-4 bg-white/90 hover:bg-white rounded-full px-3 py-1 text-sm font-semibold text-slate-700 shadow focus:outline-none focus:ring-2 focus:ring-emerald-500"
+          >
+            Zamknij ✕
+          </button>
+        </div>
+      )}
     </section>
   );
 }
