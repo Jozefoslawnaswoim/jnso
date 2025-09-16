@@ -112,7 +112,7 @@ function Hero() {
           </button>
 
           <p className="mt-2 text-xs text-slate-500">
-            Mapa poglądowa proponowanych granic Józefosławia. Tło © OpenStreetMap (ODbL).
+            Mapa poglądowa proponowanych granic gminy Józefosław. Tło © OpenStreetMap (ODbL).
           </p>
         </div>
       </div>
