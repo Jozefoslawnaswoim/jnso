@@ -79,19 +79,19 @@ function Hero() {
           </div>
           <p className="mt-4 text-xs text-slate-500">To inicjatywa społeczna — nie zbieramy składek, tylko głosy, pomysły i energię do działania.</p>
         </div>
-        <div>
-          <div className="relative rounded-3xl shadow-lg ring-1 ring-slate-200 overflow-hidden">
-            <div className="relative w-full" style={{ paddingTop: "62.5%" }}>
-              <iframe
-                title="Mapa Józefosław"
-                className="absolute inset-0 w-full h-full"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=20.98%2C52.08%2C21.07%2C52.13&layer=mapnik&marker=52.105%2C21.02"
-                loading="lazy"
-              />
-            </div>
-          </div>
-          <p className="mt-2 text-xs text-slate-500">Mapa poglądowa okolic Józefosławia (źródło: OpenStreetMap).</p>
+        <div className="relative rounded-3xl shadow-lg ring-1 ring-slate-200 overflow-hidden">
+          <img
+            src="/mapa-jozefoslaw-final.png"
+            alt="Proponowane granice gminy Józefosław na tle OpenStreetMap"
+            className="w-full h-auto"
+            loading="lazy"
+            decoding="async"
+            sizes="(min-width: 1024px) 600px, 100vw"
+          />
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          Mapa poglądowa proponowanych granic Józefosławia. Tło © OpenStreetMap (ODbL).
+        </p>
       </div>
     </section>
   );
